@@ -6,6 +6,7 @@
 package validationapi;
 
 import org.netbeans.validation.api.builtin.stringvalidation.StringValidators;
+import org.netbeans.validation.api.builtin.stringvalidation.Validation_es;
 import org.netbeans.validation.api.ui.ValidationGroup;
 
 /**
@@ -23,9 +24,10 @@ public class LoginPage extends javax.swing.JDialog {
         setSize(428, 826);
         
         ValidationGroup group = validationPanel1.getValidationGroup();
-        group.add(usernameTF, StringValidators.REQUIRE_NON_EMPTY_STRING);
+       
+        group.add(usernameTF, new Validation_es());
         group.add(emailTF, StringValidators.EMAIL_ADDRESS);
-        group.add(Password, StringValidators.REQUIRE_NON_EMPTY_STRING);
+        group.add(Password, new Validation_es());
         
     }
 
