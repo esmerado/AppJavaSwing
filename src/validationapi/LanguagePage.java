@@ -6,10 +6,14 @@
 package validationapi;
 
 import java.awt.Color;
+import java.awt.Font;
+import static java.awt.Font.BOLD;
 import java.awt.Image;
+import java.awt.ItemSelectable;
 import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
 /**
@@ -222,7 +226,100 @@ public class LanguagePage extends javax.swing.JDialog {
     }//GEN-LAST:event_BritishBtnActionPerformed
 
     private void listComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listComboActionPerformed
-        listCombo.getSelectedIndex();
+        
+        int seleccion = listCombo.getSelectedIndex();
+        try {
+
+            // Dependiendo del click que hagamos, va a coger una opción u otra, para ello usamos un switch
+            switch (seleccion) {
+
+                case 0:
+
+                // Creación de unobjeto de la clase Font
+                Font f = new Font("Sitka Banner", BOLD, 32);
+
+                // Con la clase UIManager, y el método setLookAndFeel, vamos a cambiar la fuente que ha sido importada y
+                // añadida a la librería previamente
+                UIManager.setLookAndFeel("com.jtattoo.plaf.bernstein.BernsteinLookAndFeel");
+
+                // Y con la clase SwingUtitlites y el método updateComponentTreeUI, vamos a actualizar y aplicar el tema
+                // previamente importada
+                SwingUtilities.updateComponentTreeUI(this);
+                jLabel1.setFont(f);
+
+                break;
+
+                case 1:
+
+                // Creación de unobjeto de la clase Font
+                Font f1 = new Font("Sikta Display", BOLD, 24);
+
+                // Con la clase UIManager, y el método setLookAndFeel, vamos a cambiar la fuente que ha sido importada y
+                // añadida a la librería previamente
+                UIManager.setLookAndFeel("com.jtattoo.plaf.aero.AeroLookAndFeel");
+
+                // Y con la clase SwingUtitlites y el método updateComponentTreeUI, vamos a actualizar y aplicar el tema
+                // previamente importada
+                SwingUtilities.updateComponentTreeUI(this);
+                jLabel1.setFont(f1);
+
+                break;
+
+                case 2:
+
+                // Creación de unobjeto de la clase Font
+                Font f2 = new Font("Sikta Heading", BOLD, 32);
+
+                // Con la clase UIManager, y el método setLookAndFeel, vamos a cambiar la fuente que ha sido importada y
+                // añadida a la librería previamente
+                UIManager.setLookAndFeel("com.jtattoo.plaf.aluminium.AluminiumLookAndFeel");
+
+                // Y con la clase SwingUtitlites y el método updateComponentTreeUI, vamos a actualizar y aplicar el tema
+                // previamente importada
+                SwingUtilities.updateComponentTreeUI(this);
+                jLabel1.setFont(f2);
+
+                break;
+
+                case 3:
+
+                // Creación de unobjeto de la clase Font
+                Font f3 = new Font("SimSun", BOLD, 32);
+
+                // Con la clase UIManager, y el método setLookAndFeel, vamos a cambiar la fuente que ha sido importada y
+                // añadida a la librería previamente
+                UIManager.setLookAndFeel("com.jtattoo.plaf.hifi.HiFiLookAndFeel");
+
+                // Y con la clase SwingUtitlites y el método updateComponentTreeUI, vamos a actualizar y aplicar el tema
+                // previamente importada
+                SwingUtilities.updateComponentTreeUI(this);
+
+                jLabel1.setFont(f3);
+
+                break;
+
+                case 4:
+
+                // Creación de unobjeto de la clase Font
+                Font f4 = new Font("Showcard Gotic", BOLD, 32);
+
+                // Con la clase UIManager, y el método setLookAndFeel, vamos a cambiar la fuente que ha sido importada y
+                // añadida a la librería previamente
+                UIManager.setLookAndFeel("com.jtattoo.plaf.mcwin.McWinLookAndFeel");
+
+                // Y con la clase SwingUtitlites y el método updateComponentTreeUI, vamos a actualizar y aplicar el tema
+                // previamente importada
+                SwingUtilities.updateComponentTreeUI(this);
+
+                jLabel1.setFont(f4);
+
+                break;
+
+            }
+        } catch (Exception e) {
+
+        }
+        
     }//GEN-LAST:event_listComboActionPerformed
 
     /**
